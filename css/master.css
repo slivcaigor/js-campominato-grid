@@ -13,16 +13,19 @@ img {
 }
 
 .wrapper {
-  background-color: #7FFFD4;
+  background-color: #801515;
   /* debug */
-  height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0px;
+  height: 778px;
 }
 
 .container {
-  background-color: bisque;
-  height: 85vh;
-  width: 50%;
+  width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .credits {
@@ -33,24 +36,56 @@ img {
 }
 
 #play {
-  padding: 10px 20px;
+  padding: 5px 15px;
   font-size: 20px;
   font-weight: 600;
 }
 
+.styling {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 #header {
-  background-color: royalblue;
+  background-color: #550000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 10px 50px;
 }
 
 #footer {
-  background-color: royalblue;
+  background-color: #550000;
 }
 
 .credits span {
   color: red;
   font-size: 25px;
+}
+
+.controls span {
+  font-size: 20px;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+.box.clicked {
+  background-color: rgb(0, 140, 255);
+}
+
+.box {
+  border: 1px solid white;
+  color: wheat;
+  font-weight: 600;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
