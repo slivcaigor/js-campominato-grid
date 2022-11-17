@@ -1,11 +1,3 @@
-/*
-L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
-Ogni cella ha un numero progressivo, da 1 a 100.
-Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-*/
-
-
 
 const selectDifficulty = document.getElementById("select_difficulty");
 const squaresContainer = document.querySelector(".container");
@@ -20,20 +12,23 @@ startGame.addEventListener("click", function () {
 
   const totalSquares = numSquares(difficulty);
 
-  for (let i = 0; i < totalSquares; i++) {
+  for (let i = 1; i <= totalSquares; i++) {
 
-    const square = document.createElement("div");
     const squareNumber = document.createElement("span");
+    const square = document.createElement("div");
 
     square.classList.add("box");
-    squareNumber.textContent = i + 1;
+    squareNumber.textContent = i;
 
     squaresContainer.append(square);
     square.append(squareNumber);
-    square.addEventListener("click", squareClick);
+
+    square.addEventListener("click", function () {
+      square.classList.toggle("clicked");
+      console.log(i);
+    });
   };
 });
-
 
 
 function numSquares(difficulty) {
@@ -52,7 +47,3 @@ function numSquares(difficulty) {
   }
 };
 
-
-function squareClick() {
-  this.classList.toggle("clicked");
-}
