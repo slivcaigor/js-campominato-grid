@@ -26,7 +26,28 @@ img {
 }
 
 .container {
-  width: 500px;
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-easy {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-mid {
+  width: 550px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-hard {
+  width: 450px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -86,8 +107,8 @@ img {
   border: 1px solid white;
   color: wheat;
   font-weight: 600;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   margin: 5px;
   display: flex;
   justify-content: center;
